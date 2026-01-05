@@ -11,7 +11,7 @@ const SecondSection = () => {
         </p>
       </Fadeup>
       <Fadeup delay={0.1}>
-        <h1 className="text-black font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-1 mb-3 text-center">
+        <h1 className="text-black font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-1 mb-3 text-center">
           The DaniPest Difference
         </h1>
       </Fadeup>
