@@ -32,7 +32,7 @@ const Navbar = () => {
 
         <div className="hidden md:block">
           <Link
-            href="/book"
+            href="/pricing"
             className="bg-white text-green-800 px-5 py-2.5 rounded-lg font-medium hover:bg-green-600 hover:text-white transition-colors "
           >
             Book Now

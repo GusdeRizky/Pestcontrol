@@ -27,7 +27,7 @@ const ForthSection = () => {
 
             <div className="flex items-center gap-2 rounded-full bg-white px-6 py-3 text-green-700 font-semibold shadow hover:bg-green-50 transition">
               <MessageCircle size={18} />
-              <Link href="/prcing">Contact via Message</Link>
+              <Link href="/pricing">Contact via Message</Link>
             </div>
           </div>
         </div>
