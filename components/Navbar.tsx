@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Bug, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,12 +32,7 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden md:block">
-          <Link
-            href="/pricing"
-            className="bg-white text-green-800 px-5 py-2.5 rounded-lg font-medium hover:bg-green-600 hover:text-white transition-colors "
-          >
-            Book Now
-          </Link>
+          <ConnectButton label="Start Protecting" showBalance={false} chainStatus={"none"} />
         </div>
 
         <button
@@ -64,13 +60,9 @@ const Navbar = () => {
           >
             Pricing
           </Link>
-          <Link
-            href="/book"
-            onClick={() => setIsOpen(false)}
-            className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 w-3/4 text-center"
-          >
-            Book Now
-          </Link>
+          <div className="flex justify-center w-full" onClick={() => setIsOpen(false)}>
+            <ConnectButton label="Start Protecting" showBalance={false} chainStatus={"none"} />
+          </div>
         </div>
       )}
     </header>
