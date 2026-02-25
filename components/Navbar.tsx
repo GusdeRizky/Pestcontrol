@@ -4,9 +4,11 @@ import React, { useState } from "react";
 import { Bug, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { useAccount } from "wagmi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { isConnected } = useAccount();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -29,6 +31,11 @@ const Navbar = () => {
           <Link href="/pricing" className="hover:underline">
             Pricing
           </Link>
+          {isConnected && (
+            <Link href="/dashboard" className="hover:underline">
+              Dashboard
+            </Link>
+          )}
         </nav>
 
         <div className="hidden md:block">
@@ -60,6 +67,15 @@ const Navbar = () => {
           >
             Pricing
           </Link>
+          {isConnected && (
+            <Link
+              href="/dashboard"
+              onClick={() => setIsOpen(false)}
+              className="text-lg font-medium text-gray-600 hover:text-green-600"
+            >
+              Dashboard
+            </Link>
+          )}
           <div className="flex justify-center w-full" onClick={() => setIsOpen(false)}>
             <ConnectButton label="Start Protecting" showBalance={false} chainStatus={"none"} />
           </div>

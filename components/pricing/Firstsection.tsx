@@ -139,7 +139,7 @@ const Firstsection = () => {
                   </span>
                 </div>
                 <div className="text-green-600 font-medium mt-1">
-                  ( ~ {plan.ethPrice} Sepolia ETH )
+                  ({plan.ethPrice} Sepolia ETH)
                 </div>
                 <span className="text-gray-400 text-sm font-medium">
                   /treatment
