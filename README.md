@@ -1,136 +1,97 @@
-# DaniPest - Eco-Friendly Pest Control Services
+# DaniPest - Decentralized Eco-Friendly Pest Control Platform
 
-DaniPest adalah aplikasi web untuk layanan pengendalian hama terpadu yang ramah lingkungan. Dibangun dengan Next.js untuk memberikan pengalaman pengguna yang modern dan responsif.
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://pestcontrol-bice.vercel.app/)
+[![Next.js](https://img.shields.io/badge/Next.js-15+-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Blockchain](https://img.shields.io/badge/Web3-Enabled-blue?style=for-the-badge&logo=ethereum)](https://ethereum.org/)
 
-## Deskripsi Proyek
+**DaniPest** adalah platform layanan pengendalian hama terintegrasi yang menggabungkan solusi ramah lingkungan dengan transparansi teknologi Blockchain. Dibangun untuk memberikan kepastian layanan melalui Smart Contract dan pengalaman pengguna yang modern.
 
-DaniPest menyediakan layanan pengendalian hama profesional yang aman, efektif, dan eco-friendly untuk rumah dan gedung. Aplikasi ini menampilkan informasi tentang layanan, paket harga, dan cara menghubungi tim ahli kami.
+🔗 **Live Website:** [https://pestcontrol-bice.vercel.app/](https://pestcontrol-bice.vercel.app/)
 
-### Fitur Utama
+---
 
-- **Halaman Beranda**: Menampilkan informasi utama tentang layanan pest control dengan animasi yang menarik
-- **Halaman Pricing**: Tiga paket layanan (Basic, Standard, Premium) dengan fitur lengkap dan harga transparan
-- **Navigasi Responsif**: Navbar dan footer yang mudah digunakan di semua perangkat
-- **Desain Modern**: Menggunakan Tailwind CSS untuk styling yang konsisten dan Framer Motion untuk animasi halus
+## 🌟 Fitur Utama
 
-### Teknologi yang Digunakan
+- **🛡️ Layanan Terverifikasi On-Chain**: Semua pembelian paket layanan (Basic, Standard, Premium) dicatat langsung di blockchain untuk transparansi maksimal.
+- **⚡ Dashboard Real-time**: Pantau status paket aktif Anda langsung dari dashboard yang terhubung ke Smart Contract.
+- **🎨 UI Modern & Responsif**: Desain premium menggunakan Tailwind CSS v4 dengan animasi halus dari Framer Motion.
+- **🔐 Integrasi Wallet**: Mendukung koneksi berbagai wallet (MetaMask, Coinbase, dll) melalui RainbowKit & Wagmi.
+- **🌿 Eco-Friendly Approach**: Fokus pada metode pengendalian hama yang aman bagi lingkungan dan penghuni bangunan.
 
-- **Framework**: Next.js 16.1.1
-- **UI Library**: React 19.2.3
-- **Styling**: Tailwind CSS v4
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Font**: Montserrat (via Next.js font optimization)
-- **Language**: TypeScript
+---
 
-## Instalasi dan Menjalankan
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Blockchain Interface**: [Wagmi](https://wagmi.sh/) & [Viem](https://viem.sh/)
+- **Wallet Connection**: [RainbowKit](https://www.rainbowkit.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+## ⛓️ Smart Contract Details
+
+Proyek ini terintegrasi dengan Smart Contract pada jaringan Ethereum (EVM-Compatible):
+
+- **Contract Address:** `0x29bA60F5DFD3780981bd993B7f1948888301b3aE`
+- **Owner Address:** `0x4b05Efae8d029b914e9Cf36A5DE4d12D6BF9E312`
+- **Functions:**
+  - `buyPackage(uint256 _id)`: Membeli paket layanan.
+  - `getUserPackages(address _user)`: Mengambil riwayat paket pengguna.
+  - `withdrawFunds()`: Penarikan dana oleh pemilik kontrak.
+
+---
+
+## 🚀 Instalasi & Development
 
 ### Prasyarat
+- Node.js (v18.0.0+)
+- Browser dengan Wallet Extension (seperti MetaMask)
 
-- Node.js (versi 18 atau lebih baru)
-- npm, yarn, pnpm, atau bun
+### Langkah-langkah
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/GusdeRizky/Pestcontrol.git
+   cd dani_pest
+   ```
 
-### Langkah Instalasi
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-1. Clone repository ini:
+3. **Run Development Server**
+   ```bash
+   npm run dev
+   ```
+   Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
 
-```bash
-git clone https://github.com/GusdeRizky/Pestcontrol.git
-cd dani_pest
-```
+4. **Build for Production**
+   ```bash
+   npm run build
+   npm start
+   ```
 
-2. Install dependencies:
+---
 
-```bash
-npm install
-# atau
-yarn install
-# atau
-pnpm install
-# atau
-bun install
-```
+## 📁 Struktur Proyek
 
-3. Jalankan server development:
-
-```bash
-npm run dev
-# atau
-yarn dev
-# atau
-pnpm dev
-# atau
-bun dev
-```
-
-4. Buka [http://localhost:3000](http://localhost:3000) di browser untuk melihat hasilnya.
-
-### Build untuk Production
-
-```bash
-npm run build
-npm start
-```
-
-### Linting
-
-```bash
-npm run lint
-```
-
-## Struktur Proyek
-
-```
+```text
 dani_pest/
-├── app/                    # Next.js App Router
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
-│   ├── page.tsx           # Halaman beranda
-│   ├── pricing/           # Halaman pricing
-│   │   └── page.tsx
-│   └── testing/           # Halaman testing (pricing alternatif)
-│       └── page.tsx
-├── components/            # Komponen React
-│   ├── Home/              # Komponen halaman beranda
-│   ├── pricing/           # Komponen halaman pricing
-│   ├── animation/         # Komponen animasi
-│   ├── Navbar.tsx         # Komponen navigasi
-│   └── Footer.tsx         # Komponen footer
-├── public/                # Static assets
-├── package.json           # Dependencies dan scripts
-├── next.config.ts         # Konfigurasi Next.js
-├── tailwind.config.*      # Konfigurasi Tailwind CSS
-├── tsconfig.json          # Konfigurasi TypeScript
+├── app/                    # Routing & Pages (Next.js App Router)
+├── components/            # UI Components (Reusable & Page Specific)
+├── lib/                   # Utility & Blockchain Config (ABI, Constants)
+├── public/                # Static Assets (Images, Icons)
+├── project_description.txt # Detailed AI-Friendly Context
 └── README.md              # Dokumentasi ini
 ```
 
-## Paket Layanan
+---
 
-### Basic (Rp 750.000)
+## 📞 Hubungi Kami
+Siap melindungi properti Anda dengan teknologi masa depan? Hubungi tim ahli kami melalui platform DaniPest.
 
-- Treatment satu kali
-- Inspeksi hama umum
-- Spray ramah lingkungan
-- Garansi 30 hari
-- Support via email
-
-### Standard (Rp 2.500.000)
-
-- Perlindungan hama penuh
-- Treatment interior & eksterior
-- Semua hama umum tercover
-- Garansi 90 hari
-- Penjadwalan prioritas
-- Inspeksi follow-up
-
-### Premium (Rp 5.000.000)
-
-- Upaya maksimal
-- Treatment komprehensif
-- Kunjungan maintenance rutin
-- Inspeksi triwulanan
-- Support 24/7 dedicated
-- Garansi 1 tahun
-- Re-treatment gratis
-
-## Salam Sehat dan 5 Sempurna
+**Salam Sehat dan 5 Sempurna!** 🌿
