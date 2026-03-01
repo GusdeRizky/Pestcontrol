@@ -59,11 +59,10 @@ const pricingPlans = [
 ];
 
 const Firstsection = () => {
-  const { isConnected } = useAccount(); // Untuk mengecek apakah user sudah connect wallet
-  const { writeContract, isPending } = useWriteContract(); // Fungsi eksekusi Web3
-  const [loadingId, setLoadingId] = useState<number | null>(null); // Untuk animasi loading di tombol
+  const { isConnected } = useAccount();
+  const { writeContract, isPending } = useWriteContract();
+  const [loadingId, setLoadingId] = useState<number | null>(null);
 
-  // Fungsi yang dijalankan saat tombol beli diklik
   const handleBuy = async (id: number, ethAmount: string) => {
     if (!isConnected) {
       alert("Silakan Connect Wallet terlebih dahulu di pojok kanan atas!");
@@ -76,13 +75,12 @@ const Firstsection = () => {
         address: CONTRACT_ADDRESS,
         abi: CONTRACT_ABI,
         functionName: "buyPackage",
-        args: [BigInt(id)], // Mengirim ID paket (1, 2, atau 3)
-        value: parseEther(ethAmount), // Mengkonversi string "0.01" menjadi format format Wei (angka blockchain)
+        args: [BigInt(id)],
+        value: parseEther(ethAmount),
       });
     } catch (error) {
       console.error("Transaksi gagal:", error);
     } finally {
-      // Catatan: isPending dari Wagmi akan otomatis false setelah wallet selesai merespons
     }
   };
 

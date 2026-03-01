@@ -20,7 +20,7 @@ const Navbar = () => {
         <Link href="/" className="flex items-center gap-2 group z-50">
           <Bug className="w-8 h-8 group-hover:rotate-12 transition-transform" />
           <h1 className="text-xl font-bold text-white">
-            Dani<span className="text-white font-extralight">Pest</span>
+            Andure<span className="text-white font-extralight">Pest</span>
           </h1>
         </Link>
 

@@ -15,7 +15,7 @@ const Footer = () => {
             >
               <Bug className="w-8 h-8 text-white hover:rotate-12 transition-transform" />
               <span className="text-2xl font-bold text-white">
-                Dani<span className="font-light text-white">Pest</span>
+                Andure<span className="font-light text-white">Pest</span>
               </span>
             </Link>
 
@@ -62,7 +62,7 @@ const Footer = () => {
                 <div className="p-2 bg-green-800 rounded-full group-hover:bg-green-700 transition-colors">
                   <Mail className="w-4 h-4" />
                 </div>
-                <span>hello@danipest.com</span>
+                <span>hello@andurepest.com</span>
               </a>
               <div className="flex items-center gap-3 text-white  text-sm">
                 <div className="p-2 bg-green-800 rounded-full">
@@ -76,7 +76,7 @@ const Footer = () => {
 
         <div className="border-t border-green-800 mt-10 pt-6 text-center">
           <p className="text-white text-sm">
-            © {currentYear} DaniPest. All rights reserved.
+            © {currentYear} AndurePest. All rights reserved.
           </p>
         </div>
       </div>
