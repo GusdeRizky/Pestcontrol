@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "DaniPest",
+  title: "AndurePest",
   description: "Aplikasi Pendataan Hama Terpadu",
 };
 
